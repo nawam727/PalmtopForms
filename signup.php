@@ -1,78 +1,35 @@
 <?php
-session_start();
+require 'sql_db_connection.php' ;
+if(!empty($_SESSION["id"]))
+{
+  header("Location:LAP.php");
+}
+if(isset($_POST["submit"])){
+    $uname=$_POST["username"];
+    $email=$_POST["email"];
+    $pass=$_POST["password"];
+    $duplicate =mysqli_query($conn,"Select * from users where uname='$uname' OR email='$email'");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $confirm_pwd = $_POST["confirm_pass"];
-
-    $signupError = ""; // Initialize an error message variable
-
-    // Validate user inputs
-    if (empty($name) || empty($email) || empty($password) || empty($confirm_pwd)) {
-        $signupError = "Please provide all required information.";
-    } elseif ($password != $confirm_pwd) {
-        $signupError = "Passwords do not match.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $signupError = "Invalid email format.";
+    if(mysqli_num_rows($duplicate)>0){
+      echo
+      "<script>
+      alert('UserName or Email Has Already Taken');
+      window.location.href='signup.html';
+      </script>";
+        
+       
     }
-
-    // If no validation errors, proceed with registration
-    if (empty($signupError)) {
-        include "sql_db_connection.php"; // Include the database connection
-
-        // Check if the user with the same email already exists
-        $checkEmail = "SELECT * FROM user WHERE email = ?";
-        $stmtCheck = $conn->prepare($checkEmail);
-
-        if ($stmtCheck) {
-            $stmtCheck->bind_param("s", $email);
-            $stmtCheck->execute();
-            $resultCheck = $stmtCheck->get_result();
-
-            if ($resultCheck->num_rows == 0) {
-                // User does not exist, proceed with registration
-
-                // Hash the password (use a secure hashing mechanism)
-                $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-                // Create a prepared statement for registration
-                $sql = "INSERT INTO user(name, email, password) VALUES (?, ?, ?)";
-                $stmt = $conn->prepare($sql);
-
-                if ($stmt) {
-                    $stmt->bind_param("sss", $name, $email, $hashedPassword);
-
-                    if ($stmt->execute()) {
-                        // Registration successful, set session variables
-                        $_SESSION["user_id"] = $stmt->insert_id;
-                        $_SESSION["user_email"] = $email;
-
-                        // Redirect to a protected area or display a success message
-                        header("Location: ../../function.php");
-                        exit();
-                    } else {
-                        $signupError = "Registration failed: " . $stmt->error;
-                    }
-                } else {
-                    $signupError = "Database error: " . $conn->error;
-                }
-
-                $stmt->close(); // Close the prepared statement for registration
-            } else {
-                $signupError = "Email already exists. Please choose another email.";
-            }
-
-            $stmtCheck->close(); // Close the prepared statement for checking existing email
-        } else {
-            $signupError = "Database error: " . $conn->error;
-        }
-
-        // Store error message in session if any issue occurred
-        $_SESSION['signup_error'] = $signupError;
-        exit();
+    else
+    {
+      
+        $query="Insert Into Users Values ('','$uname','$email','$pass')";
+        mysqli_query($conn,$query);
+        echo
+        "<script>
+        alert('Registration Successful');
+        window.location.href='LAP.php';
+        </script>";
+        
     }
 }
 ?>

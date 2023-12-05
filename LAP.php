@@ -1,3 +1,18 @@
+<?php
+
+require 'sql_db_connection.php';
+
+if(!empty($_SESSION["id"]))
+{
+  $id=$_SESSION["id"];
+  $result=mysqli_query($conn,"select * from users where userId='$id'");
+  $row=mysqli_fetch_assoc($result);
+}
+else
+{
+ //header("Location:loging.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,11 +27,11 @@
   <body>
   	<div class="container-fluid">
   	
-		  <nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="LAP.html">&nbsp;</a><a href="LAP.html"><img src="images/logonew.jpg" alt="" width="202" height="91" class="img-fluid"></a>
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="LAP.php">&nbsp;</a><a href="LAP.php"><img src="images/logonew.jpg" alt="" width="202" height="91" class="img-fluid"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
   	      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
   	        <ul class="navbar-nav mr-auto">
-  	          <li class="nav-item active"> <a class="nav-link" href="LAP.html"><b>Home</b> <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item active"> <a class="nav-link" href="LAP.php"><b>Home</b> <span class="sr-only">(current)</span></a> </li>
   	          <li class="nav-item"> <a class="nav-link" href="about.html"><b>About</b>&nbsp;</a> </li>
   	          <li class="nav-item"> <a class="nav-link" href="promo.html"><b>Promo</b>&nbsp;</a></li>
   	          <li class="nav-item"> <a class="nav-link" href="location.html"><b>Location</b>&nbsp;</a></li>
@@ -46,8 +61,20 @@
               </li>
             </ul>
                 <form>
-					<a href="signup.html"><strong>Sign Up&nbsp;</strong> </a>| 
-					<a href="login.html"> <strong> &nbsp;Login</strong></a>
+                  <?php
+                  if(!empty($row["uname"]))
+                  {
+                    echo $row["uname"];
+                   echo "<a href='logout.php'><strong> Sign out&nbsp;</strong> </a>";
+                    
+                  }
+                  else
+                  {
+                    echo"<a href='signup.html'><strong>Sign Up&nbsp;</strong> </a>"; 
+					          echo"<a href='login.html'> <strong> &nbsp;Login</strong></a>";
+                  }
+                  ?>
+					
                 </form>
 </div> 
         </nav> <br>  <div class="container">
@@ -84,7 +111,8 @@
           </div>
   	      <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
 		  <br><hr>
-        <h1 class="text-center text-uppercase"><strong>leave your desktop behind !!!&nbsp; &nbsp; &nbsp;</strong></h1>
+        <h1 class="text-center text-uppercase"><strong>leave your desktop behind !!!&nbsp; &nbsp; &nbsp;
+        </strong></h1>
 		  <br>
         <div class="row">
             <div class="col-lg-4">
@@ -193,7 +221,7 @@
 				<a href="Youtube.html"><img src="images/insta.png" width="40" height="40" alt=""></a>
 				<a href="Youtube.html"><img src="images/Fb1.png" width="38" height="35" alt=""></a></b></center>
 			</footer> <br>
-			<p><center><b><a href="LAP.html">Home</a> | <a href="about.html">About</a> | <a href="promo.html">Promo</a> | <a href="contact.html">Contact</a> | <a href="location.html">Location</a> | <a href="brandsAndCateg.html">Brands & Categories</a></b></center></p>
+			<p><center><b><a href="LAP.php">Home</a> | <a href="about.html">About</a> | <a href="promo.html">Promo</a> | <a href="contact.html">Contact</a> | <a href="location.html">Location</a> | <a href="brandsAndCateg.html">Brands & Categories</a></b></center></p>
 <div class="row">
 	    <div class="col-lg-5"><b>&nbsp;<img src="images/newlogo.jpg" alt="" width="3365" height="1450" class="img-fluid"/></b></div>
 		  <div class="col-lg-6">&nbsp;<b>&nbsp;<br>
@@ -232,7 +260,7 @@
             </style>
 			
 			 <!-- Fixed button -->
-            <button id="fixedButton" onclick="scrollToTop()" >Sign Up</button>
+            <button id="fixedButton" onclick="scrollToTop()" >Back to Top</button>
 			
 			<script>
                // JavaScript function to scroll to the top of the page
