@@ -39,10 +39,7 @@
           class="sidebar-brand d-flex align-items-center justify-content-center"
           href="index.html"
         >
-          <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
-          </div>
-          <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+          <div class="sidebar-brand-text mx-3">PalmTop Admin</div>
         </a>
 
         <!-- Nav Item - Dashboard -->
@@ -78,11 +75,11 @@
           </div>
         </li>
 
-        <!-- Nav Item - Tables -->
+        <!-- Nav Item - Orders -->
         <li class="nav-item">
           <a class="nav-link" href="orders.html">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a
+            <span>Orders</span></a
           >
         </li>
 

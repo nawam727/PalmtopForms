@@ -10,7 +10,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>SB Admin 2 - Tables</title>
+    <title>SB Admin 2 - Orders</title>
 
     <!-- Custom fonts for this template -->
     <link
@@ -87,7 +87,7 @@
         <li class="nav-item">
           <a class="nav-link" href="orders.html">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a
+            <span>Orders</span></a
           >
         </li>
 
