@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
         echo '</div>';
     }   
 } else {
-    echo "No found.";
+    echo "No devices.";
 }
 $stmt->close();
 $conn->close();
