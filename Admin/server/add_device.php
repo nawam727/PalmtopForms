@@ -1,11 +1,12 @@
 <?php
-// Retrieve the user input from the form
 $manufacturer = $_POST['manufacturer'] ?? '';
 $model = $_POST['model'] ?? '';
 $processor = $_POST['processor'] ?? '';
 $price = $_POST['price'] ?? '';
 $generation = $_POST['generation'] ?? '';
 $ram = $_POST['ram'] ?? '';
+$title = $_POST['title'] ?? '';
+$description = $_POST['description'] ?? '';
 
 // Image upload
 $target_dir = "images/";
@@ -21,14 +22,14 @@ if (isset($_FILES["imageurl"]["tmp_name"]) && is_uploaded_file($_FILES["imageurl
             if (move_uploaded_file($_FILES["imageurl"]["tmp_name"], $target_file)) {
                 include 'config.php';
 
-                $stmt = $conn->prepare("INSERT INTO devices(Manuf, Model, Processor, Price, Generation, Ram, Imageurl) VALUES (?, ?, ?, ?, ?, ?, ?)");
-                $stmt->bind_param("sssssss", $manufacturer, $model, $processor, $price, $generation, $ram, $target_file);
+                $stmt = $conn->prepare("INSERT INTO devices(Manuf, Model, Processor, Price, Generation, Ram, Imageurl, Title, Description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                $stmt->bind_param("sssssssss", $manufacturer, $model, $processor, $price, $generation, $ram, $target_file, $title, $description);
                 $stmt->execute();
 
                 // Check if the data was inserted successfully
                 if ($stmt->affected_rows > 0) {
                     echo "Successful!";
-                    header("Location: ../index.html");
+                    header("Location: ../view_devices.php");
                 } else {
                     echo "Error: Failed to insert data.";
                 }

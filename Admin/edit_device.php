@@ -394,14 +394,28 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- Page Heading -->
-            <h1 class="h3 mb-4 text-gray-800">Add Device</h1>
+            <h1 class="h3 mb-4 text-gray-800">Edit Device</h1>
+            <?php
+              $deviceId = $_GET['did'];
+
+              include './server/config.php';
+
+              $stmt = $conn->prepare("SELECT * FROM devices WHERE DID = ?");
+              $stmt->bind_param("i", $deviceId);
+              $stmt->execute();
+              $result = $stmt->get_result();
+
+              if ($result->num_rows == 1) {
+                $device = $result->fetch_assoc();               
+            ?>
 
             <form
               class="w-50"
-              action="./server/add_device.php"
+              action="./server/edit_device.php"
               method="POST"
               enctype="multipart/form-data"
             >
+            <input type="hidden"  class="form-control" name="did" value="<?php echo $device['DID']; ?>">
               <div class="form-row">
                 <div class="form-group col">
                   <label for="inputModel">Title</label>
@@ -410,6 +424,7 @@
                     class="form-control"
                     name="title"
                     id="inputTitle"
+                    value="<?php echo $device['Title']; ?>"
                     placeholder="Title"
                   />
                 </div>
@@ -421,6 +436,7 @@
                     id="inputState"
                     name="manufacturer"
                     class="form-control"
+                    value="6"
                   >
                     <option value="Acer">Acer</option>
                     <option value="Apple">Apple</option>
@@ -439,6 +455,7 @@
                     type="text"
                     class="form-control"
                     name="model"
+                    value="<?php echo $device['Model']; ?>"
                     id="inputModel"
                     placeholder="Model"
                   />
@@ -451,6 +468,7 @@
                     type="text"
                     class="form-control"
                     id="inputProcessor"
+                    value="<?php echo $device['Processor']; ?>"
                     name="processor"
                     placeholder="Processor"
                   />
@@ -461,6 +479,7 @@
                     type="text"
                     class="form-control"
                     id="inputprice"
+                    value="<?php echo $device['Price']; ?>"
                     name="price"
                     placeholder="Price"
                   />
@@ -473,6 +492,7 @@
                     type="text"
                     class="form-control"
                     name="generation"
+                    value="<?php echo $device['Generation']; ?>"
                     id="inputGeneration"
                     placeholder="Generation"
                   />
@@ -483,6 +503,7 @@
                     type="text"
                     name="ram"
                     class="form-control"
+                    value="<?php echo $device['Ram']; ?>"
                     id="inputRAM"
                     placeholder="RAM"
                   />
@@ -499,7 +520,7 @@
                     placeholder="Description"
                     cols="30"
                     rows="10"
-                  ></textarea>
+                  ><?php echo $device['Description']; ?></textarea>
                 </div>
               </div>
 
@@ -516,6 +537,15 @@
 
               <button type="submit" class="btn btn-primary">Add Device</button>
             </form>
+
+            <?php
+              } else {
+                  echo "not found.";
+              }
+              $stmt->close();
+              $conn->close();
+            ?>
+
           </div>
           <!-- /.container-fluid -->
         </div>
