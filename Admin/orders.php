@@ -56,7 +56,6 @@ if (!isset($_SESSION["user_id"])) {
         <div id="content">
           <!-- Topbar -->
           <?php include './components/navbar.php';?>
-
           <!-- End of Topbar -->
 
           <!-- Begin Page Content -->
@@ -64,7 +63,7 @@ if (!isset($_SESSION["user_id"])) {
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Devices</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Orders</h6>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -76,18 +75,23 @@ if (!isset($_SESSION["user_id"])) {
                   >
                     <thead>
                       <tr>
-                        <th></th>
-                        <th>Product</th>
-                        <th>Manufacturer</th>
+                        <th>Order #</th>
+                        <th>Purchased on</th>
+                        <th>Email</th>
+                        <th>Province</th>
                         <th>Model</th>
-                        <th>Processor</th>
-                        <th>Generation</th>
-                        <th>Ram (GB)</th>
-                        <th>Action</th>
+                        <th>Quantity</th>
                       </tr>
                     </thead>
                     <tbody>
-                    <?php include './server/fetch_devices.php';?>
+                      <tr>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>61</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -102,7 +106,7 @@ if (!isset($_SESSION["user_id"])) {
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Website 2020</span>
+              <span>Copyright &copy; Your Website 2020</span>
             </div>
           </div>
         </footer>
