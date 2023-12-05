@@ -27,7 +27,7 @@ if(isset($_POST["submit"])){
         echo
         "<script>
         alert('Registration Successful');
-        window.location.href='LAP.php';
+        window.location.href='login.html';
         </script>";
         
     }
