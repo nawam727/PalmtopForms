@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Check if "Ship to a different address" is checked
-    if (isset($_POST["showAdditional"]) && $_POST["showAdditional"] == "on") {
+    if (isset($_POST["showAdditional"]) && $_POST["showAdditional"] == "1") {
         // Collect shipping details
         $shippingFirstName = $_POST["sfname"];
         $shippingSecondName = $_POST["ssname"];

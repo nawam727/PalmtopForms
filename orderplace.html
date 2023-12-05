@@ -200,19 +200,23 @@
             <b><u>Shipping Details</u></b>
           </h3>
 
-          <script>
-            function toggleAdditionalFields() {
-              var checkbox = document.getElementById("showAdditional");
-              var condition = checkbox.checked;
-              var additionalFields =
-                document.getElementById("additionalFields");
+          <input type="hidden" name="showAdditional" value="0" />
 
-              if (condition) {
-                additionalFields.style.display = "block";
-              } else {
-                additionalFields.style.display = "none";
+          <script>
+              function toggleAdditionalFields() {
+                  var checkbox = document.getElementById("showAdditional");
+                  var hiddenInput = document.querySelector('input[name="showAdditional"]');
+                  var condition = checkbox.checked;
+                  var additionalFields = document.getElementById("additionalFields");
+
+                  if (condition) {
+                      additionalFields.style.display = "block";
+                      hiddenInput.value = "1"; // Set the value to indicate checked
+                  } else {
+                      additionalFields.style.display = "none";
+                      hiddenInput.value = "0"; // Set the value to indicate unchecked
+                  }
               }
-            }
           </script>
           <label for="showAdditional">Ship to a different address?</label>
           <input
@@ -223,9 +227,9 @@
 
           <div id="additionalFields" style="display: none">
             <label for="additionalInfo"><b>First Name* :-</b></label>
-            <input type="text" id="sfname" name="sfname" required />
+            <input type="text" id="sfname" name="sfname" />
             <label for="additionalInfo"><b>Second Name* :-</b></label>
-            <input type="text" id="ssname" name="ssname" required /><br />
+            <input type="text" id="ssname" name="ssname" /><br />
             <label for="additionalinfo"><b>Province* :-</b></label> <br />
             <select name="Province">
               <option value="0">Select here</option>
@@ -246,7 +250,6 @@
               name="Street Address"
               id="ssaddress"
               placeholder=" House No & Street name"
-              required
             />
             <input
               type="text"
@@ -261,20 +264,18 @@
             /><br />
             <label for="postal"><b>Postal Code/ZIP* :-</b></label
             ><br />
-            <input type="text" name="Postal Code" id="spostal" required /><br />
+            <input type="text" name="Postal Code" id="spostal" /><br />
             <label for="phone"><b>Phone* :-</b></label> <br /><input
               type="text"
               name="phone"
               id="sphone"
               placeholder=" Ex:- +947xxxxxxxx"
-              required
             /><br />
             <label for="email"><b>E-Mail* :-</b></label> <br /><input
               type="text"
               name="email"
               id="semail"
               placeholder=" Ex:- abc@xxxx.com"
-              required
             /><br />
           </div>
           <br />
