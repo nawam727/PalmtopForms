@@ -116,33 +116,28 @@
       </nav>
       <br />
       <div class="container">
-        <form>
-          <center>
-            <input type="text" placeholder="Search your LAPTOP" /><input
-              type="submit"
-              value="SEARCH"
-            />
-          </center>
-        </form>
-        <br />
         <h2 class="text-center text-capitalize">
           <strong
-            >Enter your details here to place the order!&nbsp; &nbsp;
+            >Tell us What Kind of laptop You are searching !&nbsp; &nbsp;
             &nbsp;</strong
           >
         </h2>
         <br />
         <form id="orderplacing" name="orderplacing" method="post">
           <h3>
-            <b><u>Billing Details</u></b>
+            <b><u>Customer Details</u></b>
           </h3>
 
           <label for="fname"><b>First Name* :-</b></label>
           <input type="text" name="First Name" id="fname" required />
           <label for="sname"><b>Second Name* :-</b></label>
           <input type="text" name="Second Name" id="sname" required /><br />
-          <label for="comname"><b>Company Name(optional) :-</b></label>
-          <br /><input type="text" name="Company Name" id="comname" required />
+          <label for="comname"><b>Purpose(optional) :-</b></label> <br /><input
+            type="text"
+            name="Company Name"
+            id="comname"
+            required
+          />
           <br />
           <label for="Province"><b>Province* :-</b></label> <br />
           <select name="Province">
@@ -195,7 +190,60 @@
             required
           /><br /><br />
           <hr />
+          <h3>
+            <b><u>Details about searching Laptop</u></b>
+          </h3>
+          <label for="manufact"><b>Manufacturer* :-</b></label> <br />
+          <select name="Province">
+            <option value="0">Not restricted</option>
+            <option value="1">Acer</option>
+            <option value="2">Apple</option>
+            <option value="3">Asus</option>
+            <option value="4">Dell</option>
+            <option value="5">HP</option>
+            <option value="6">Lenovo</option>
+            <option value="7">MSI</option>
+            <option value="8">One Notebook</option>
+            <option value="9">Vivo</option></select
+          ><br /><br />
+          <label for="priceRange"><b>Select a Price Range* :-</b></label>
+          <input
+            type="range"
+            id="priceRange"
+            min="0"
+            max="800000"
+            step="10"
+            value="500"
+            required
+          />
+          <output for="priceRange" id="priceOutput">0</output>
 
+          <script>
+            const priceRange = document.getElementById("priceRange");
+            const priceOutput = document.getElementById("priceOutput");
+
+            priceRange.addEventListener("input", function () {
+              priceOutput.value = priceRange.value;
+            });
+          </script>
+          <br />
+          <label for="Lbrand"><b>Model* :-</b></label>
+          <input type="text" name="model" id="model" required />
+          <label for="Lmodel"><b>Model No* :-</b></label>
+          <input type="text" name="modelno" id="Lmodelno" required /><br />
+          <label for="processor"><b>Processor* :-</b></label>
+          <input type="text" name="processor" id="processor" required />
+          <label for="gener"><b>Generation* :-</b></label>
+          <input type="text" name="gener" id="gener" required /><br />
+          <label for="ram"><b>RAM* :-</b></label>
+          <input
+            type="text"
+            name="ram"
+            id="ram"
+            placeholder=" GB"
+            required
+          /><br />
+          <hr />
           <h3>
             <b><u>Shipping Details</u></b>
           </h3>
