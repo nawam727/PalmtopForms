@@ -54,6 +54,7 @@
 
 			<!--This is Billing form part-->
 			<form id="orderplacing" name="orderplacing" method="post" action="server/orderplace.php">
+      <input type="hidden" name="did" value="<?php echo $_GET['did'] ?? ''; ?>">
 				<h3><b><u>Billing Details</u></b></h3>
 
 				<label for="fname"><b>First Name* :-</b></label> <input type="text" name="Fname" id="fname" required>
@@ -142,6 +143,7 @@
 					cols="50" placeholder="Type Here"></textarea><br><br>
 				<input type="submit" id="submit" name="submit" value="Place Order">
 				<input type="reset" id="reset" name="reset" value="Reset">
+        
 
 			</form>
 			<br>
@@ -184,7 +186,7 @@
 							<a href="brandsAndCateg.html">Lenovo</a>
 						</center>
 					</b> </div>
-				<a href="orderplace.html"></a><!-- body code goes here -->
+				<a href="orderplace.php"></a><!-- body code goes here -->
 
 
 				<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

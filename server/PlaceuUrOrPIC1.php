@@ -60,9 +60,9 @@
 
         // Redirect back to the HTML file with success or error message as URL parameters
         if (isset($successMessage)) {
-            header("Location: ../PlaceuUrOrPIC1.html?success=" . urlencode($successMessage));
+            header("Location: ../PlaceuUrOrPIC1.php?success=" . urlencode($successMessage));
         } elseif (isset($errorMessage)) {
-            header("Location: ../PlaceuUrOrPIC1.html?error=" . urlencode($errorMessage));
+            header("Location: ../PlaceuUrOrPIC1.php?error=" . urlencode($errorMessage));
         }
     }
 ?>

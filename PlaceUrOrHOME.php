@@ -219,7 +219,7 @@
 							<a href="brandsAndCateg.html">Lenovo</a>
 						</center>
 					</b> </div>
-				<a href="orderplace.html"></a><!-- body code goes here -->
+				<a href="orderplace.php"></a><!-- body code goes here -->
 
 
 				<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
