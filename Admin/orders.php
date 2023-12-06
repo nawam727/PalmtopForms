@@ -76,22 +76,16 @@ if (!isset($_SESSION["user_id"])) {
                     <thead>
                       <tr>
                         <th>Order #</th>
-                        <th>Purchased on</th>
+                        <th>Title</th>
+                        <th>Model</th>
                         <th>Email</th>
                         <th>Province</th>
-                        <th>Model</th>
-                        <th>Quantity</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                      </tr>
+                     <?php include './server/get_order.php';?>
                     </tbody>
                   </table>
                 </div>
