@@ -196,7 +196,7 @@ if (!isset($_SESSION["user_id"])) {
                 />
               </div>
 
-              <button type="submit" class="btn btn-primary">Add Device</button>
+              <button type="submit" class="btn btn-primary">EDit Device</button>
             </form>
 
             <?php
