@@ -17,7 +17,7 @@ $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 if (isset($_FILES["imageurl"]["tmp_name"]) && is_uploaded_file($_FILES["imageurl"]["tmp_name"])) {
     $check = getimagesize($_FILES["imageurl"]["tmp_name"]);
     if ($check !== false) {
-        // Allow certain file formats
+        // Allow file formats
         if ($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg" || $imageFileType == "gif") {
             if (move_uploaded_file($_FILES["imageurl"]["tmp_name"], $target_file)) {
                 include 'config.php';
