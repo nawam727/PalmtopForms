@@ -15,7 +15,7 @@ if ($result->num_rows > 0) {
         echo '<div class="card-body">';
         echo '<h5 class="card-title text-center"><strong>'. $row['Title'] .'</strong></h5>';
         echo '<p class="card-text">' . $row['Description'] . '</p>';
-        echo '<center><a href="orderplace.html?did='.$row['DID'].'" class="btn btn-primary">Buy</a></center>';
+        echo '<center><a href="orderplace.php?did='.$row['DID'].'" class="btn btn-primary">Buy</a></center>';
         echo '</div>';
         echo '</div>';
         echo '</div>';

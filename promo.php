@@ -12,47 +12,10 @@
   <body>
   	<div class="container-fluid">
   	  
-		  <nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="LAP.php">&nbsp;</a><a href="LAP.php"><img src="images/logonew.jpg" alt="" width="202" height="1450" class="img-fluid"></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-  	      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-  	        <ul class="navbar-nav mr-auto">
-  	          <li class="nav-item"> <a class="nav-link" href="LAP.php"><b>Home</b> </a> </li>
-  	          <li class="nav-item"> <a class="nav-link" href="about.html"><b>About</b>&nbsp;</a> </li>
-  	          <li class="nav-item active"> <a class="nav-link" href="promo.html"><b>Promo</b>&nbsp;<span class="sr-only">(current)</span></a></li>
-  	          <li class="nav-item"> <a class="nav-link" href="location.html"><b>Location</b>&nbsp;</a></li>
-  	          <li class="nav-item"> <a class="nav-link" href="contact.html" onclick="checker()"><b>Contact</b>&nbsp;</a></li>
-  	          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <b>Brands</b>&nbsp; </a>
-  	            <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#"></a> <a class="dropdown-item" href="brandsAndCateg.html">Dell</a>
-  	              <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="brandsAndCateg.html">HP</a>
-				  <div class="dropdown-divider"></div>
-					 <a class="dropdown-item" href="brandsAndCateg.html">MSI</a>
-					<div class="dropdown-divider"></div>
-				   <a class="dropdown-item" href="brandsAndCateg.html">Asus</a>
-				  <div class="dropdown-divider"></div>
-				  <a class="dropdown-item" href="brandsAndCateg.html">Macbooks</a>
-				  <div class="dropdown-divider"></div>
-				  <a class="dropdown-item" href="brandsAndCateg.html">Lenovo</a></div>
-			 </li>
-				<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Categories</b> <b></b>&nbsp; </a>
-  	            <div class="dropdown-menu" aria-labelledby="navbarDropdown2"> <a class="dropdown-item" href="#"></a> <a class="dropdown-item" href="brandsAndCateg.html">Speakers </a>
-  	              <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="brandsAndCateg.html"> Projectors</a>
-				  <div class="dropdown-divider"></div>
-				   <a class="dropdown-item" href="brandsAndCateg.html">UBS HUB</a>
-				  <div class="dropdown-divider"></div>
-				  <a class="dropdown-item" href="brandsAndCateg.html">Printers and Scanners</a></div>
-              </li>
-            </ul>
-			  <form>
-					<a href="signup.html"><strong>Sign Up</strong> </a>|
-					<a href="login.html"> <strong> Login</strong></a>
-                </form>
-</div> 
-        </nav> 
+		<?php include './component/navbar.php';?>
       <h2 class="text-center text-capitalize"><strong>Best Promotions !&nbsp; &nbsp; &nbsp;</strong></h2><hr>
 	  <div class="container">  
-        <a href="orderplace.html"></a> 
+        <a href="orderplace.php"></a> 
 </div>
 		<div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: grey">
 		  <ol class="carousel-indicators">
@@ -120,7 +83,7 @@
 				<a href="Youtube.html"><img src="images/insta.png" width="40" height="40" alt=""></a>
 				<a href="Youtube.html"><img src="images/Fb1.png" width="38" height="35" alt=""></a></b></center>
 	</footer> <br>
-			<p><center><b><a href="LAP.php">Home</a> | <a href="about.html">About</a> | <a href="promo.html">Promo</a> | <a href="contact.html">Contact</a> | <a href="location.html">Location</a> | <a href="brandsAndCateg.html">Brands & Categories</a></b></center></p>
+			<p><center><b><a href="LAP.php">Home</a> | <a href="about.php">About</a> | <a href="promo.php">Promo</a> | <a href="contact.php">Contact</a> | <a href="location.php">Location</a> | <a href="brandsAndCateg.php">Brands & Categories</a></b></center></p>
 <div class="row">
 	    <div class="col-lg-5"><b>&nbsp;<img src="images/newlogo.jpg" alt="" width="3365" height="1450" class="img-fluid"/></b></div>
 		  <div class="col-lg-6"><b>&nbsp;<br>
@@ -132,12 +95,12 @@
 	         <b><center>
 			<br>
 			<p><u>Top Brands</u></p>
-			<a href="brandsAndCateg.html">Apple</a><br>
-			<a href="brandsAndCateg.html">Asus</a><br>
-			<a href="brandsAndCateg.html">Dell</a><br>
-			<a href="brandsAndCateg.html">HP</a><br>
-			<a href="brandsAndCateg.html">MSI</a><br>
-			<a href="brandsAndCateg.html">Lenovo</a></center></b>
+			<a href="brandsAndCateg.php">Apple</a><br>
+			<a href="brandsAndCateg.php">Asus</a><br>
+			<a href="brandsAndCateg.php">Dell</a><br>
+			<a href="brandsAndCateg.php">HP</a><br>
+			<a href="brandsAndCateg.php">MSI</a><br>
+			<a href="brandsAndCateg.php">Lenovo</a></center></b>
 	    </div>
 	</div>
 	

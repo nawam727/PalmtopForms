@@ -1,18 +1,4 @@
-<?php
 
-require 'sql_db_connection.php';
-
-if(!empty($_SESSION["id"]))
-{
-  $id=$_SESSION["id"];
-  $result=mysqli_query($conn,"select * from users where userId='$id'");
-  $row=mysqli_fetch_assoc($result);
-}
-else
-{
- //header("Location:loging.html");
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,69 +14,8 @@ else
 
 <body>
   <div class="container-fluid">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="LAP.php">&nbsp;</a><a
-        href="LAP.php"><img src="images/logonew.jpg" alt="" width="202" height="91" class="img-fluid"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span
-          class="navbar-toggler-icon"></span> </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"> <a class="nav-link" href="LAP.php"><b>Home</b> <span
-                class="sr-only">(current)</span></a> </li>
-          <li class="nav-item"> <a class="nav-link" href="about.html"><b>About</b>&nbsp;</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="promo.html"><b>Promo</b>&nbsp;</a></li>
-          <li class="nav-item"> <a class="nav-link" href="location.html"><b>Location</b>&nbsp;</a></li>
-
-          <li class="nav-item"> <a onclick="checker()" class="nav-link" href="contact.html"><b>Contact</b>&nbsp;</a>
-          </li>
-          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <b>Brands</b>&nbsp; </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#"></a> <a
-                class="dropdown-item" href="brandsAndCateg.html">Dell</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="brandsAndCateg.html">HP</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="brandsAndCateg.html">MSI</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="brandsAndCateg.html">Asus</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="brandsAndCateg.html">Macbooks</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="brandsAndCateg.html">Lenovo</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Categories</b> <b></b>&nbsp; </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown2"> <a class="dropdown-item" href="#"></a> <a
-                class="dropdown-item" href="brandsAndCateg.html"> Speakers </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="brandsAndCateg.html"> Projectors</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="brandsAndCateg.html">UBS HUB</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="brandsAndCateg.html">Printers and Scanners</a>
-            </div>
-          </li>
-        </ul>
-        <form>
-          <?php
-                  if(!empty($row["uname"]))
-                  {
-                    echo $row["uname"];
-                   echo "<a href='logout.php'><strong> Sign out&nbsp;</strong> </a>";
-                    
-                  }
-                  else
-                  {
-                    echo"<a href='signup.html'><strong>Sign Up&nbsp;</strong> </a>"; 
-					          echo"<a href='login.html'> <strong> &nbsp;Login</strong></a>";
-                  }
-                  ?>
-
-        </form>
-      </div>
-    </nav> <br>
+  <?php include './component/navbar.php';?>
+ <br>
     <div class="container">
 
       <form>
@@ -233,9 +158,9 @@ else
             <a href="Youtube.html"><img src="images/Fb1.png" width="38" height="35" alt=""></a></b></center>
       </footer> <br>
       <p>
-        <center><b><a href="LAP.php">Home</a> | <a href="about.html">About</a> | <a href="promo.html">Promo</a> | <a
-              href="contact.html">Contact</a> | <a href="location.html">Location</a> | <a
-              href="brandsAndCateg.html">Brands & Categories</a></b></center>
+        <center><b><a href="LAP.php">Home</a> | <a href="about.php">About</a> | <a href="promo.php">Promo</a> | <a
+              href="contact.php">Contact</a> | <a href="location.php">Location</a> | <a
+              href="brandsAndCateg.php">Brands & Categories</a></b></center>
       </p>
       <div class="row">
         <div class="col-lg-5"><b>&nbsp;<img src="images/newlogo.jpg" alt="" width="3365" height="1450"
@@ -249,12 +174,12 @@ else
             <center>
               <br>
               <p><u>Top Brands</u></p>
-              <a href="brandsAndCateg.html">Apple</a><br>
-              <a href="brandsAndCateg.html">Asus</a><br>
-              <a href="brandsAndCateg.html">Dell</a><br>
-              <a href="brandsAndCateg.html">HP</a><br>
-              <a href="brandsAndCateg.html">MSI</a><br>
-              <a href="brandsAndCateg.html">Lenovo</a>
+              <a href="brandsAndCateg.php">Apple</a><br>
+              <a href="brandsAndCateg.php">Asus</a><br>
+              <a href="brandsAndCateg.php">Dell</a><br>
+              <a href="brandsAndCateg.php">HP</a><br>
+              <a href="brandsAndCateg.php">MSI</a><br>
+              <a href="brandsAndCateg.php">Lenovo</a>
             </center>
           </b>
         </div>
