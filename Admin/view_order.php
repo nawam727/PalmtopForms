@@ -64,33 +64,14 @@ if (!isset($_SESSION["user_id"])) {
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Devices</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Order Details</h6>
               </div>
               <div class="card-body">
-                <div class="table-responsive">
-                  <table
-                    class="table table-bordered"
-                    id="dataTable"
-                    width="100%"
-                    cellspacing="0"
-                  >
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th>Product</th>
-                        <th>Manufacturer</th>
-                        <th>Model</th>
-                        <th>Processor</th>
-                        <th>Generation</th>
-                        <th>Ram (GB)</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    <?php include './server/fetch_devices.php';?>
-                    </tbody>
-                  </table>
-                </div>
+              <table width="75%" cellspacing="0">
+                <thead>
+                <?php include './server/view_order.php';?>
+                </thead>
+              </table>
               </div>
             </div>
           </div>

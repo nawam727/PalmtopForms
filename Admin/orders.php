@@ -80,7 +80,7 @@ if (!isset($_SESSION["user_id"])) {
                         <th>Model</th>
                         <th>Email</th>
                         <th>Province</th>
-                        <th>Phone</th>
+                        <th>Address</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
