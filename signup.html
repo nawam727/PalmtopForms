@@ -1,266 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PALMTOP.lk</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
-    <link href="Style.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="Style.css" rel="stylesheet" type="text/css">
+	  
   </head>
   <body>
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="LAP.php">&nbsp;</a
-        ><a href="LAP.php"
-          ><img
-            src="images/logonew.jpg"
-            alt=""
-            width="202"
-            height="1450"
-            class="img-fluid"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent1"
-          aria-controls="navbarSupportedContent1"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="LAP.php"><b>Home</b></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html"><b>About</b>&nbsp;</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="promo.html"><b>Promo</b>&nbsp;</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="location.html"><b>Location</b>&nbsp;</a>
-            </li>
+  	<div class="container-fluid">
+  	  
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="LAP.php">&nbsp;</a><a href="LAP.php"><img src="images/logonew.jpg" alt="" width="202" height="1450" class="img-fluid"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item"> <a class="nav-link" href="LAP.php"><b>Home</b></a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="about.html"><b>About</b>&nbsp;</a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="promo.html"><b>Promo</b>&nbsp;</a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="location.html"><b>Location</b>&nbsp;</a></li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html" onclick="checker()"
-                ><b>Contact</b>&nbsp;</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown1"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <b>Brands</b>&nbsp;
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                <a class="dropdown-item" href="#"></a>
-                <a class="dropdown-item" href="brandsAndCateg.html">Dell</a>
-                <div class="dropdown-divider"></div>
+  	          <li class="nav-item"> <a class="nav-link" href="contact.html" onclick="checker()"><b>Contact</b>&nbsp;</a></li>
+  	          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <b>Brands</b>&nbsp; </a>
+  	            <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#"></a> <a class="dropdown-item" href="brandsAndCateg.html">Dell</a>
+  	              <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="brandsAndCateg.html">HP</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="brandsAndCateg.html">MSI</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="brandsAndCateg.html">Asus</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="brandsAndCateg.html">Macbooks</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="brandsAndCateg.html">Lenovo</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown2"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                ><b>Categories</b> <b></b>&nbsp;
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                <a class="dropdown-item" href="#"></a>
-                <a class="dropdown-item" href="brandsAndCateg.html"
-                  >Speakers
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="brandsAndCateg.html">
-                  Projectors</a
-                >
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="brandsAndCateg.html">UBS HUB</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="brandsAndCateg.html"
-                  >Printers and Scanners</a
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <br />
-      <div class="container">
-        <br />
+				  <div class="dropdown-divider"></div>
+					 <a class="dropdown-item" href="brandsAndCateg.html">MSI</a>
+					<div class="dropdown-divider"></div>
+				   <a class="dropdown-item" href="brandsAndCateg.html">Asus</a>
+				  <div class="dropdown-divider"></div>
+				  <a class="dropdown-item" href="brandsAndCateg.html">Macbooks</a>
+				  <div class="dropdown-divider"></div>
+				  <a class="dropdown-item" href="brandsAndCateg.html">Lenovo</a></div>
+			 </li>
+				<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Categories</b> <b></b>&nbsp; </a>
+  	            <div class="dropdown-menu" aria-labelledby="navbarDropdown2"> <a class="dropdown-item" href="#"></a> <a class="dropdown-item" href="brandsAndCateg.html">Speakers </a>
+  	              <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="brandsAndCateg.html"> Projectors</a>
+				  <div class="dropdown-divider"></div>
+				   <a class="dropdown-item" href="brandsAndCateg.html">UBS HUB</a>
+				  <div class="dropdown-divider"></div>
+				  <a class="dropdown-item" href="brandsAndCateg.html">Printers and Scanners</a></div>
+              </li>
+            </ul>
+</div> 
+        </nav> <br><div class="container"> <br>
+		
+		<style>
+		form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
 
-        <style>
-          form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-          }
+    h2 {
+      text-align: center;
+    }
 
-          h2 {
-            text-align: center;
-          }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
 
-          label {
-            display: block;
-            margin-bottom: 8px;
-          }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
 
-          input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-          }
+    button {
+      background-color: #0096FF;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
 
-          button {
-            background-color: #0096ff;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-          }
+    button:hover {
+      background-color:#00008B;
+    }
+		</style>
+		
+		<center><form method="post" action="signup.php">
+    <h2>Sign Up</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
 
-          button:hover {
-            background-color: #00008b;
-          }
-        </style>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-        <center>
-          <form method="post" action="signup.php">
-            <h2>Sign Up</h2>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required />
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+    <button type="submit" name="submit">Sign Up</button><br>
+    <center><h6>Alredy have an account :- <a href="login.html">Login</a></h6></center>
+  </form></center>
+		
+		
+		
+		</div> <br>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required />
+		<div class="card">
+			<footer>
+				<center><b>We are Here! 24/7 Customer Support. <br>
+		    <a href="hr.com">+947312345678</a> / <a href="hr.com">+947912345678</a> <br>
+			<a href="laptopsforsale123@gmail.com">PALMTOPlk@gmail.com</a> <br> 
+				<a href="Youtube.html"><img src="images/whtsap.png" width="45" height="43" alt=""></a>
+				<a href="Youtube.html"><img src="images/insta.png" width="40" height="40" alt=""></a>
+				<a href="Youtube.html"><img src="images/Fb1.png" width="38" height="35" alt=""></a></b></center>
+			</footer> <br>
+			<p><center><b><a href="LAP.php">Home</a> | <a href="about.html">About</a> | <a href="promo.html">Promo</a> | <a href="contact.html">Contact</a> | <a href="location.html">Location</a> | <a href="brandsAndCateg.html">Brands & Categories</a></b></center></p>
+<div class="row">
+	    <div class="col-lg-5"><b>&nbsp;<img src="images/newlogo.jpg" alt="" width="3365" height="1450" class="img-fluid"/></b></div>
+		  <div class="col-lg-6">&nbsp;<b>&nbsp;<br>
+		    &nbsp; Laptops for sale.<br><br> 
+	      &nbsp; #21/A, Weliwatta road, Colombo 09.<br><br> 
+	      &nbsp; Copyright © 2023 PALMTOP.lk | All rights reserved.</b></div>
+	
+	    <div class="col-log-7"><b><center><p><u>Top Brands</u></p>
+			<a href="brandsAndCateg.html">Apple</a><br>
+			<a href="brandsAndCateg.html">Asus</a><br>
+			<a href="brandsAndCateg.html">Dell</a><br>
+			<a href="brandsAndCateg.html">HP</a><br>
+			<a href="brandsAndCateg.html">MSI</a><br>
+			<a href="brandsAndCateg.html">Lenovo</a></center></b></div>
+         <a href="orderplace.html"></a> 
+		  <br>
+</div>
+			
+  	<!-- body code goes here -->
 
-            <button type="submit">Sign Up</button><br />
-            <center>
-              <h6>Alredy have an account :- <a href="login.html">Login</a></h6>
-            </center>
-          </form>
-        </center>
-      </div>
-      <br />
 
-      <div class="card">
-        <footer>
-          <center>
-            <b
-              >We are Here! 24/7 Customer Support. <br />
-              <a href="hr.com">+947312345678</a> /
-              <a href="hr.com">+947912345678</a> <br />
-              <a href="laptopsforsale123@gmail.com">PALMTOPlk@gmail.com</a>
-              <br />
-              <a href="Youtube.html"
-                ><img src="images/whtsap.png" width="45" height="43" alt=""
-              /></a>
-              <a href="Youtube.html"
-                ><img src="images/insta.png" width="40" height="40" alt=""
-              /></a>
-              <a href="Youtube.html"
-                ><img src="images/Fb1.png" width="38" height="35" alt="" /></a
-            ></b>
-          </center>
-        </footer>
-        <br />
-        <p>
-          <center>
-            <b
-              ><a href="LAP.php">Home</a> | <a href="about.html">About</a> |
-              <a href="promo.html">Promo</a> |
-              <a href="contact.html">Contact</a> |
-              <a href="location.html">Location</a> |
-              <a href="brandsAndCateg.html">Brands & Categories</a></b
-            >
-          </center>
-        </p>
-        <div class="row">
-          <div class="col-lg-5">
-            <b
-              >&nbsp;<img
-                src="images/newlogo.jpg"
-                alt=""
-                width="3365"
-                height="1450"
-                class="img-fluid"
-            /></b>
-          </div>
-          <div class="col-lg-6">
-            &nbsp;<b
-              >&nbsp;<br />
-              &nbsp; Laptops for sale.<br /><br />
-              &nbsp; #21/A, Weliwatta road, Colombo 09.<br /><br />
-              &nbsp; Copyright © 2023 PALMTOP.lk | All rights reserved.</b
-            >
-          </div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
 
-          <div class="col-log-7">
-            <b
-              ><center>
-                <p><u>Top Brands</u></p>
-                <a href="brandsAndCateg.html">Apple</a><br />
-                <a href="brandsAndCateg.html">Asus</a><br />
-                <a href="brandsAndCateg.html">Dell</a><br />
-                <a href="brandsAndCateg.html">HP</a><br />
-                <a href="brandsAndCateg.html">MSI</a><br />
-                <a href="brandsAndCateg.html">Lenovo</a>
-              </center></b
-            >
-          </div>
-          <a href="orderplace.html"></a>
-          <br />
-        </div>
-
-        <!-- body code goes here -->
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/jquery-3.4.1.min.js"></script>
-
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap-4.4.1.js"></script>
-        <script>
-          function checker() {
-            var result = confirm("Are You Sure?");
-            if (result == false) {
-              event.preventDefault();
-            }
-          }
-        </script>
-      </div>
-    </div>
-  </body>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script> 
+  <script src="js/bootstrap-4.4.1.js"></script>
+		     <script>
+            function checker()
+            {
+                var result= confirm('Are You Sure?');
+				if ( result == false) {
+					event.preventDefault();
+				}
+			}
+    </script>
+	  </div>  </div> </body>
 </html>

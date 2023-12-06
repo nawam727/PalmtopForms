@@ -22,7 +22,7 @@ if(isset($_POST["submit"])){
     else
     {
       
-        $query="Insert Into Users Values ('','$uname','$email','$pass')";
+        $query="Insert Into users Values ('','$uname','$email','$pass')";
         mysqli_query($conn,$query);
         echo
         "<script>
