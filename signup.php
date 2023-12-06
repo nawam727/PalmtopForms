@@ -1,5 +1,5 @@
 <?php
-require 'sql_db_connection.php' ;
+require './server/config.php' ;
 if(!empty($_SESSION["id"]))
 {
   header("Location:LAP.php");

@@ -1,5 +1,5 @@
 <?php
-require 'sql_db_connection.php';
+require './server/config.php';
 $_SESSION=[];
 session_unset();
 session_destroy();
