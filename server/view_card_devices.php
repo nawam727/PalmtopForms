@@ -1,6 +1,6 @@
 <?php
 
-include 'config.php';
+include 'no_config_session.php';
 
 $stmt = $conn->prepare("SELECT * FROM devices");
 $stmt->execute();

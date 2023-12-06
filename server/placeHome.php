@@ -4,16 +4,7 @@
 
         <?php
         // Database connection
-        $host = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "palmtop";
-
-        $conn = new mysqli($host, $username, $password, $database);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include 'no_config_session.php';
 
         // Customer data
         $fname = $_POST['Fname'];
@@ -54,7 +45,7 @@
                             VALUES ('$fname', '$sname', '$purpose', '$province', '$stradd1', '$stradd2', '$town', '$poscode', '$phone', '$email', '$info')";
 
         // Insert data into the devices table
-        $sql_devices = "INSERT INTO devices (Manuf, Price, Model, ModelNo, Processor, Generation, Ram)
+        $sql_devices = "INSERT INTO devices_search (Manuf, Price, Model, ModelNo, Processor, Generation, Ram)
         VALUES ('$manuf', '$price', '$model', '$modelno', '$proce', '$gen', '$ram')";
 
         if ($conn->query($sql_cusdetails) === TRUE) {
@@ -91,9 +82,9 @@
 
         // Redirect back to the HTML file with success or error message as URL parameters
         if (isset($successMessage)) {
-            header("Location: ../PlaceUrOr HOME.html?success=" . urlencode($successMessage));
+            header("Location: ../PlaceUrOrHOME.php?success=" . urlencode($successMessage));
         } elseif (isset($errorMessage)) {
-            header("Location: ../PlaceUrOr HOME.html?error=" . urlencode($errorMessage));
+            header("Location: ../PlaceUrOrHOME.php?error=" . urlencode($errorMessage));
         }
 
         ?>

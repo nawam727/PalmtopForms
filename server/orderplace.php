@@ -4,16 +4,7 @@
 
         <?php
         // Database connection
-        $host = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "palmtop";
-
-        $conn = new mysqli($host, $username, $password, $database);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include 'no_config_session.php';
 
         // Form data
         $fname = $_POST['Fname'];

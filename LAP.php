@@ -70,7 +70,7 @@
       <h4 class="text-center"><b>| We are ready to find the Laptop you need. After filling out the form below we can
           arrange your order asap and we’ll let you know via email or sms. |</b></h4>
       <br>
-      <a href="PlaceUrOr HOME.html"><img src="images/LaptopOrderNew.JPEG.jpg" alt="" width="1150" height="363"
+      <a href="PlaceUrOrHOME.php"><img src="images/LaptopOrderNew.JPEG.jpg" alt="" width="1150" height="363"
           class="img-fluid" /></a>
       <br>
 
