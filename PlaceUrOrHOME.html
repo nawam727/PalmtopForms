@@ -46,6 +46,7 @@
             <li class="nav-item">
               <a class="nav-link" href="location.html"><b>Location</b>&nbsp;</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="contact.html" onclick="checker()"
                 ><b>Contact</b>&nbsp;</a
@@ -116,34 +117,28 @@
       <br />
       <div class="container">
         <h2 class="text-center text-capitalize">
-          <strong>Place your new order here !&nbsp; &nbsp; &nbsp;</strong>
+          <strong
+            >Tell us What Kind of laptop You are searching !&nbsp; &nbsp;
+            &nbsp;</strong
+          >
         </h2>
         <br />
         <form id="orderplacing" name="orderplacing" method="post">
           <h3>
-            <b><u>Billing Details</u></b>
+            <b><u>Customer Details</u></b>
           </h3>
 
           <label for="fname"><b>First Name* :-</b></label>
           <input type="text" name="First Name" id="fname" required />
           <label for="sname"><b>Second Name* :-</b></label>
           <input type="text" name="Second Name" id="sname" required /><br />
-          <label for="comname"><b>Company Name(optional) :-</b></label>
-          <br /><input
+          <label for="comname"><b>Purpose(optional) :-</b></label> <br /><input
             type="text"
             name="Company Name"
             id="comname"
             required
-          /><br />
-          <label for="cate"><b>Category Code/Codes* :-</b></label
-          ><br />
-          <input type="text" name="cate" id="cate" placeholder=" 1" required />
-          <input type="text" name="brand1" id="brand1" placeholder=" 2" />
-          <input type="text" name="brand2" id="brand2" placeholder=" 3" />
+          />
           <br />
-          <input type="text" name="cate1" id="cate1" placeholder=" 4" />
-          <input type="text" name="cate2" id="cate2" placeholder=" 5" />
-          <input type="text" name="cate3" id="cate3" placeholder=" 6" /><br />
           <label for="Province"><b>Province* :-</b></label> <br />
           <select name="Province">
             <option value="0">Select here</option>
@@ -195,7 +190,60 @@
             required
           /><br /><br />
           <hr />
+          <h3>
+            <b><u>Details about searching Laptop</u></b>
+          </h3>
+          <label for="manufact"><b>Manufacturer* :-</b></label> <br />
+          <select name="Province">
+            <option value="0">Not restricted</option>
+            <option value="1">Acer</option>
+            <option value="2">Apple</option>
+            <option value="3">Asus</option>
+            <option value="4">Dell</option>
+            <option value="5">HP</option>
+            <option value="6">Lenovo</option>
+            <option value="7">MSI</option>
+            <option value="8">One Notebook</option>
+            <option value="9">Vivo</option></select
+          ><br /><br />
+          <label for="priceRange"><b>Select a Price Range* :-</b></label>
+          <input
+            type="range"
+            id="priceRange"
+            min="0"
+            max="800000"
+            step="10"
+            value="500"
+            required
+          />
+          <output for="priceRange" id="priceOutput">0</output>
 
+          <script>
+            const priceRange = document.getElementById("priceRange");
+            const priceOutput = document.getElementById("priceOutput");
+
+            priceRange.addEventListener("input", function () {
+              priceOutput.value = priceRange.value;
+            });
+          </script>
+          <br />
+          <label for="Lbrand"><b>Model* :-</b></label>
+          <input type="text" name="model" id="model" required />
+          <label for="Lmodel"><b>Model No* :-</b></label>
+          <input type="text" name="modelno" id="Lmodelno" required /><br />
+          <label for="processor"><b>Processor* :-</b></label>
+          <input type="text" name="processor" id="processor" required />
+          <label for="gener"><b>Generation* :-</b></label>
+          <input type="text" name="gener" id="gener" required /><br />
+          <label for="ram"><b>RAM* :-</b></label>
+          <input
+            type="text"
+            name="ram"
+            id="ram"
+            placeholder=" GB"
+            required
+          /><br />
+          <hr />
           <h3>
             <b><u>Shipping Details</u></b>
           </h3>
@@ -290,8 +338,10 @@
           <input type="reset" id="reset" name="reset" value="Reset" />
         </form>
         <br />
-        <br />
       </div>
+
+      <br />
+      <br />
       <div class="card">
         <footer>
           <center>
