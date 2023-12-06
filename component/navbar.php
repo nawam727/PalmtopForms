@@ -13,14 +13,14 @@ else
  //header("Location:loging.html");
 }
 ?>
-<nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="LAP.php">&nbsp;</a><a
-        href="LAP.php"><img src="images/logonew.jpg" alt="" width="202" height="91" class="img-fluid"></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="index.php">&nbsp;</a><a
+        href="index.php"><img src="images/logonew.jpg" alt="" width="202" height="91" class="img-fluid"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
         aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span
           class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent1">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"> <a class="nav-link" href="LAP.php"><b>Home</b> <span
+          <li class="nav-item active"> <a class="nav-link" href="index.php"><b>Home</b> <span
                 class="sr-only">(current)</span></a> </li>
           <li class="nav-item"> <a class="nav-link" href="about.php"><b>About</b>&nbsp;</a> </li>
           <li class="nav-item"> <a class="nav-link" href="promo.php"><b>Promo</b>&nbsp;</a></li>

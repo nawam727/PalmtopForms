@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
         echo '<td>' . $row['Email'] . '</td>'; 
         echo '<td>' . $row['Province'] . '</td>'; 
         echo '<td>' . $row['Phone'] . '</td>'; 
-        echo '<td> <a href="./view_order.php?oid='.$row['OID'].'">View</a></td>';
+        echo '<td> <a href="../view_order.php?oid='.$row['OID'].'">View</a></td>';
         echo '</tr>';
     }
 } else {

@@ -2,7 +2,7 @@
 require './server/config.php';
 if(!empty($_SESSION["id"]))
 {
-  header("Location:LAP.php");
+  header("Location:index.php");
 }
 if(isset($_POST["submit"]))
 {
@@ -16,7 +16,7 @@ if(isset($_POST["submit"]))
         {
             $_SESSION["login"]=true;
             $_SESSION["id"]=$row["userId"];
-           header("Location:Lap.php");
+           header("Location:index.php");
         }
         else
         echo "<script>alert('Wrong Password')</script>";

@@ -2,7 +2,7 @@
 require './server/config.php' ;
 if(!empty($_SESSION["id"]))
 {
-  header("Location:LAP.php");
+  header("Location:index.php");
 }
 if(isset($_POST["submit"])){
     $uname=$_POST["username"];

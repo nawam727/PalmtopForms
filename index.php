@@ -158,7 +158,7 @@
             <a href="Youtube.html"><img src="images/Fb1.png" width="38" height="35" alt=""></a></b></center>
       </footer> <br>
       <p>
-        <center><b><a href="LAP.php">Home</a> | <a href="about.php">About</a> | <a href="promo.php">Promo</a> | <a
+        <center><b><a href="index.php">Home</a> | <a href="about.php">About</a> | <a href="promo.php">Promo</a> | <a
               href="contact.php">Contact</a> | <a href="location.php">Location</a> | <a
               href="brandsAndCateg.php">Brands & Categories</a></b></center>
       </p>

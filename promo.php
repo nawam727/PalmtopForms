@@ -83,7 +83,7 @@
 				<a href="Youtube.html"><img src="images/insta.png" width="40" height="40" alt=""></a>
 				<a href="Youtube.html"><img src="images/Fb1.png" width="38" height="35" alt=""></a></b></center>
 	</footer> <br>
-			<p><center><b><a href="LAP.php">Home</a> | <a href="about.php">About</a> | <a href="promo.php">Promo</a> | <a href="contact.php">Contact</a> | <a href="location.php">Location</a> | <a href="brandsAndCateg.php">Brands & Categories</a></b></center></p>
+			<p><center><b><a href="index.php">Home</a> | <a href="about.php">About</a> | <a href="promo.php">Promo</a> | <a href="contact.php">Contact</a> | <a href="location.php">Location</a> | <a href="brandsAndCateg.php">Brands & Categories</a></b></center></p>
 <div class="row">
 	    <div class="col-lg-5"><b>&nbsp;<img src="images/newlogo.jpg" alt="" width="3365" height="1450" class="img-fluid"/></b></div>
 		  <div class="col-lg-6"><b>&nbsp;<br>
