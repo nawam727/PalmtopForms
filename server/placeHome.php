@@ -6,6 +6,8 @@
         // Database connection
         include 'no_config_session.php';
 
+        $rondomId = rand(100000, 9999999);
+
         // Customer data
         $fname = $_POST['Fname'];
         $sname = $_POST['Sname'];
@@ -41,12 +43,12 @@
         $semail = $showAdditional ? $_POST['semail'] : $email;
 
         // Insert data into the cusdetails table
-        $sql_cusdetails = "INSERT INTO cusdetails (Fname, Sname, Purpose, Province, StrAdd1, StrAdd2, Town, PosCode, Phone, Email, Info)
-                            VALUES ('$fname', '$sname', '$purpose', '$province', '$stradd1', '$stradd2', '$town', '$poscode', '$phone', '$email', '$info')";
+        $sql_cusdetails = "INSERT INTO cusdetails (CID, Fname, Sname, Purpose, Province, StrAdd1, StrAdd2, Town, PosCode, Phone, Email, Info)
+                            VALUES ('$rondomId', '$fname', '$sname', '$purpose', '$province', '$stradd1', '$stradd2', '$town', '$poscode', '$phone', '$email', '$info')";
 
         // Insert data into the devices table
-        $sql_devices = "INSERT INTO devices_search (Manuf, Price, Model, ModelNo, Processor, Generation, Ram)
-        VALUES ('$manuf', '$price', '$model', '$modelno', '$proce', '$gen', '$ram')";
+        $sql_devices = "INSERT INTO devices_search (Manuf, Price, Model, ModelNo, Processor, Generation, Ram, CID)
+        VALUES ('$manuf', '$price', '$model', '$modelno', '$proce', '$gen', '$ram', '$rondomId')";
 
         if ($conn->query($sql_cusdetails) === TRUE) {
             $successMessage = "Record inserted successfully";
@@ -54,16 +56,16 @@
             // Check if the checkbox is checked
             if ($showAdditional) {
                 // Insert data into the shipping table
-                $sql_shipping = "INSERT INTO shipping (Fname, Sname, Province, StrAdd1, StrAdd2, Town, PosCode, Phone, Email)
-                                VALUES ('$sfname', '$ssname', '$sprovince', '$ssaddress', '$ssapartment', '$stown', '$spostal', '$sphone', '$semail')";
+                $sql_shipping = "INSERT INTO shipping (Fname, Sname, Province, StrAdd1, StrAdd2, Town, PosCode, Phone, Email, CID)
+                                VALUES ('$sfname', '$ssname', '$sprovince', '$ssaddress', '$ssapartment', '$stown', '$spostal', '$sphone', '$semail', '$rondomId')";
 
                 if ($conn->query($sql_shipping) !== TRUE) {
                     $errorMessage = "Error inserting shipping data: " . $conn->error;
                 }
             } else {
                 // If checkbox is not checked, insert the same data into the shipping table
-                $sql_shipping_same_data = "INSERT INTO shipping (Fname, Sname, Province, StrAdd1, StrAdd2, Town, PosCode, Phone, Email)
-                                VALUES ('$fname', '$sname', '$province', '$stradd1', '$stradd2', '$town', '$poscode', '$phone', '$email')";
+                $sql_shipping_same_data = "INSERT INTO shipping (Fname, Sname, Province, StrAdd1, StrAdd2, Town, PosCode, Phone, Email, CID)
+                                VALUES ('$fname', '$sname', '$province', '$stradd1', '$stradd2', '$town', '$poscode', '$phone', '$email', '$rondomId')";
 
                 if ($conn->query($sql_shipping_same_data) !== TRUE) {
                     $errorMessage = "Error inserting shipping data: " . $conn->error;
